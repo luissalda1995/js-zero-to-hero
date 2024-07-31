@@ -24,7 +24,7 @@ function findLongestWord(str) {
 }
 
 function findSmallestNumber(arr) {
-    let smallest = 0;
+    let smallest = arr[0];
     for(let i = 0; i < arr.length; i++){
         if(arr[i] < smallest){
             smallest = arr[i];
@@ -33,8 +33,20 @@ function findSmallestNumber(arr) {
     return smallest;
 }
 
+function repeatString(word, times){
+    for(let i = 0; i < times; i++){
+        console.log(word);
+    }
+}
+
+function troncateWords(str, num){
+    return str.slice(0, num) + '...';
+}
+
 console.log(reverseString('hello')); // olleh
 console.log(factorial(5)); // 120
 console.log(factorialRecursive(5)); // 120
 console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // jumped
 console.log(findSmallestNumber([1, 2, 3, 4, 5])); // 1
+console.log(repeatString('hello', 3)); // hello hello hello
+console.log(troncateWords('hello world', 5)); // hello...
